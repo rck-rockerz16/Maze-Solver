@@ -1,0 +1,72 @@
+html,
+body {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+hr {
+  border: 1px solid #EEE;
+  border-bottom: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+
+#maze-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  width: 80%;
+}
+
+#controls {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(101, 101, 101, 0.35);
+
+  h1:first-child {
+    margin-top: 0;
+  }
+}
+
+#maze-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+canvas#maze-bg {
+  z-index: 0;
+}
+
+canvas#maze-walls {
+  z-index: 2;
+}
+
+canvas#maze-solution {
+  z-index: 4;
+}
+
+.footer {
+  text-align: center;
+}

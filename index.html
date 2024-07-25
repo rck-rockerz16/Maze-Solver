@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maze Generator</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <section id="maze-container">
+    <canvas id="maze-bg"></canvas>
+    <canvas id="maze-walls"></canvas>
+    <canvas id="maze-solution"></canvas>
+  </section>
+  <section id="controls">
+    <h1>Generator</h1>
+    <p>These mazes are currently randomly generated. If you get a bad maze or a solution you don't like, hit "Regenerate" below to create another one.</p>
+    <p>
+      <label for="size">Maze Size:</label>
+      <input id="size" type="range" min="10" max="100" value="15" step="1" oninput="document.getElementById('size-value').value = this.value;">
+      <output id="size-value" for="size">15</output>
+    </p>
+    <p><button id="generate">Regenerate</button></p>
+
+    <hr>
+
+    <h1>Solver</h1>
+    <p>Solves the generated maze.</p>
+    <p>
+      <label for="solver-algorithm">
+        Algorithm:
+      </label>
+      <select id="solver-algorithm">
+        <option value="astar">A* Search</option>
+        <option value="depth-first">Depth-First Search</option>
+        <option value="breadth-first">Breadth-First Search</option>
+      </select>
+    </p>
+    <p>
+      <button id="solve">Solve</button>
+      <small id="solve-status"></small>
+    </p>
+
+    <hr>
+
+  </section>
+  <script type="text/javascript" src="/index.js"></script>
+</body>
+</html>
